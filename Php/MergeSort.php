@@ -11,7 +11,7 @@ class MergeSort
     public function __construct()
     {
         //ex for understanding; $array = [2, 3, 1];
-        $array = [5, 10, 2, 50, 9, 3, 13, 36];
+        $array = [5, 10, 2, 50, 9, 3, 10, 13, 36];
         echo 'Unsorted array: ' . json_encode($array) . PHP_EOL;
         $sortedArray = $this->sort($array);
         echo 'Sorted array : ' . json_encode($sortedArray);
@@ -39,7 +39,7 @@ class MergeSort
 
         //merging two sorted arrays into one. continues till one half is done
         while ($i < count($firstHalf) && $j < count($secondHalf)){
-            if($firstHalf[$i] < $secondHalf[$j]){
+            if($firstHalf[$i] <= $secondHalf[$j]){
                 $newSortedArray[] = $firstHalf[$i];
                 $i++;
             }

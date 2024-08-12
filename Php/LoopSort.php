@@ -8,12 +8,13 @@
 class LoopSort
 {
     function __construct(){
-        $this->sort();
+        $array = [10, 5, 6 , 9, 5, 1 , 7];
+        echo "Unsorted array: " . json_encode($array) . PHP_EOL;
+        $sortedArray = $this->sort($array);
+        echo "Sorted array: " . json_encode($sortedArray);
     }
 
-    public function sort(){
-        $array = [10, 5, 6 , 9, 1 , 7];
-        echo "Unsorted array: " . json_encode($array) . PHP_EOL;
+    public function sort($array){
         //logic: just swap the values
         //to understand sort [3,2,1] in paper
         for ($i = 0; $i < count($array); $i++){
@@ -25,8 +26,7 @@ class LoopSort
                 }
             }
         }
-
-        echo "Sorted array: " . json_encode($array);
+        return $array;
     }
 }
 
