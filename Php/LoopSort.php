@@ -2,6 +2,7 @@
 
 /*
  * ALso Bubble sort
+ * command to run code in cmd : cd > php > php LoopSort.php
  * */
 
 class LoopSort
@@ -29,7 +30,5 @@ class LoopSort
     }
 }
 
-$obj = new LoopSort();
-
-//command to run code in cmd
-//cd > php > php LoopSort.php
+//runs the code
+new LoopSort();
