@@ -37,7 +37,7 @@ class MergeSort
         $newSortedArray = [];
         $i = $j = 0;
 
-        //continues till one half is done
+        //merging two sorted arrays into one. continues till one half is done
         while ($i < count($firstHalf) && $j < count($secondHalf)){
             if($firstHalf[$i] < $secondHalf[$j]){
                 $newSortedArray[] = $firstHalf[$i];
